@@ -1,8 +1,11 @@
 #include<mongoose.h>
 #include<iostream>
+#include<nlohmann/json.hpp>
+using nlohmann::json;
 
 using namespace std;
 static void ev_handler(struct mg_connection* c, int ev, void* p);
+static void server_handler(struct mg_connection* nc, int ev, void* ev_data);
 //#include<iostream>
 //#include <cpprest/http_client.h>
 //#include <cpprest/filestream.h>
